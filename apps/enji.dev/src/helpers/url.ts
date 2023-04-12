@@ -3,9 +3,9 @@ export const getBaseUrl = () => {
     case 'production':
       return 'https://www.enji.dev';
     case 'preview':
-      return 'https://www.enji.dev';
+      return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
     default:
-      return 'https://www.enji.dev';
+      return `http://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
   }
 };
 
